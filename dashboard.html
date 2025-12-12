@@ -1,44 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NYSRP Dashboard</title>
-  <link href="css/tailwind.css" rel="stylesheet">
-  <link href="css/styles.css" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NYSRP Dashboard</title>
+<link href="css/tailwind.css" rel="stylesheet">
+<link href="css/styles.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
 </head>
-<body class="bg-gray-900 text-white flex">
+<body class="flex bg-[#0F111A] text-white font-orbitron">
   <!-- Sidebar -->
-  <div id="sidebar" class="w-64 bg-gray-800 min-h-screen p-4 flex flex-col space-y-4">
-    <h1 class="text-2xl font-bold text-center mb-6">NYSRP Dashboard</h1>
-    <ul class="space-y-2">
-      <li data-page="activity" class="sidebar-item cursor-pointer hover:bg-gray-700 p-2 rounded">Staff Activity Tracker</li>
-      <li data-page="moderation" class="sidebar-item cursor-pointer hover:bg-gray-700 p-2 rounded">Moderation Control Panel</li>
-      <li data-page="training" class="sidebar-item cursor-pointer hover:bg-gray-700 p-2 rounded">Training Manager</li>
-      <li data-page="reports" class="sidebar-item cursor-pointer hover:bg-gray-700 p-2 rounded">Incident & Report Center</li>
-      <li data-page="calls" class="sidebar-item cursor-pointer hover:bg-gray-700 p-2 rounded">Staff Call System</li>
-      <li data-page="discipline" class="sidebar-item cursor-pointer hover:bg-gray-700 p-2 rounded">Staff Discipline Log</li>
-      <li data-page="resources" class="sidebar-item cursor-pointer hover:bg-gray-700 p-2 rounded">Resource Library</li>
-      <li data-page="flagged" class="sidebar-item cursor-pointer hover:bg-gray-700 p-2 rounded">Flagged Players Monitor</li>
-      <li data-page="bans" class="sidebar-item cursor-pointer hover:bg-gray-700 p-2 rounded">Ban & Blacklist Lookup</li>
-      <li data-page="communications" class="sidebar-item cursor-pointer hover:bg-gray-700 p-2 rounded">Staff Communications Hub</li>
-      <li data-page="patrol" class="sidebar-item cursor-pointer hover:bg-gray-700 p-2 rounded">Patrol Zone Manager</li>
-      <li data-page="logs" class="sidebar-item cursor-pointer hover:bg-gray-700 p-2 rounded">Logs Viewer</li>
-      <li data-page="suggestions" class="sidebar-item cursor-pointer hover:bg-gray-700 p-2 rounded">Staff Suggestions</li>
-      <li data-page="status" class="sidebar-item cursor-pointer hover:bg-gray-700 p-2 rounded">Real-Time Server Status</li>
-      <li data-page="rolesync" class="sidebar-item cursor-pointer hover:bg-gray-700 p-2 rounded">RoleSync System</li>
+  <aside id="sidebar" class="w-64 bg-white/5 backdrop-blur-xl p-4 flex flex-col transition-all duration-300">
+    <h1 class="text-cyan-400 text-2xl font-bold mb-6 text-center">NYSRP Dashboard</h1>
+    <ul class="flex flex-col space-y-2">
+      <li data-page="activity" class="sidebar-item hover:bg-white/10 p-2 rounded cursor-pointer transition">Activity Tracker</li>
+      <li data-page="moderation" class="sidebar-item hover:bg-white/10 p-2 rounded cursor-pointer transition">Moderation</li>
+      <li data-page="training" class="sidebar-item hover:bg-white/10 p-2 rounded cursor-pointer transition">Training</li>
+      <li data-page="reports" class="sidebar-item hover:bg-white/10 p-2 rounded cursor-pointer transition">Reports</li>
+      <li data-page="calls" class="sidebar-item hover:bg-white/10 p-2 rounded cursor-pointer transition">Staff Calls</li>
+      <li data-page="discipline" class="sidebar-item hover:bg-white/10 p-2 rounded cursor-pointer transition">Discipline</li>
+      <li data-page="resources" class="sidebar-item hover:bg-white/10 p-2 rounded cursor-pointer transition">Resources</li>
+      <li data-page="flagged" class="sidebar-item hover:bg-white/10 p-2 rounded cursor-pointer transition">Flagged Players</li>
+      <li data-page="bans" class="sidebar-item hover:bg-white/10 p-2 rounded cursor-pointer transition">Bans</li>
+      <li data-page="communications" class="sidebar-item hover:bg-white/10 p-2 rounded cursor-pointer transition">Communications</li>
+      <li data-page="patrol" class="sidebar-item hover:bg-white/10 p-2 rounded cursor-pointer transition">Patrol</li>
+      <li data-page="logs" class="sidebar-item hover:bg-white/10 p-2 rounded cursor-pointer transition">Logs</li>
+      <li data-page="suggestions" class="sidebar-item hover:bg-white/10 p-2 rounded cursor-pointer transition">Suggestions</li>
+      <li data-page="status" class="sidebar-item hover:bg-white/10 p-2 rounded cursor-pointer transition">Server Status</li>
+      <li data-page="rolesync" class="sidebar-item hover:bg-white/10 p-2 rounded cursor-pointer transition">RoleSync</li>
     </ul>
-    <button id="logoutBtn" class="mt-auto bg-red-600 hover:bg-red-700 p-2 rounded font-semibold">Logout</button>
-  </div>
+    <button id="logoutBtn" class="mt-auto bg-red-600 hover:bg-red-700 py-2 rounded font-bold transition">Logout</button>
+  </aside>
 
   <!-- Main Content -->
-  <div id="mainContent" class="flex-1 p-6 overflow-auto">
-    <h2 class="text-3xl font-bold mb-4">Welcome to NYSRP Dashboard</h2>
-    <p>Select a section from the sidebar to get started.</p>
-  </div>
+  <main id="mainContent" class="flex-1 p-6 overflow-auto">
+    <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+      <div class="glass-card p-6 rounded-2xl shadow-lg">
+        <h2 class="text-cyan-400 font-bold text-xl mb-2">Welcome</h2>
+        <p>Select a module from the sidebar to get started.</p>
+      </div>
+      <!-- Cards will be dynamically loaded here -->
+    </div>
+  </main>
 
   <script src="js/auth.js"></script>
   <script src="js/router.js"></script>
-  <script src="js/ui.js"></script>
+  <script src="js/sidebar.js"></script>
 </body>
 </html>
