@@ -1,1 +1,17 @@
+/* Glass + Neon Theme */
+body {
+  font-family: 'Inter', sans-serif;
+}
 
+.sidebar-item:hover {
+  background: rgba(255,255,255,0.05);
+  transition: 0.3s;
+}
+
+#mainContent h2 {
+  color: #00ffff;
+}
+
+#sidebar {
+  backdrop-filter: blur(12px);
+}
