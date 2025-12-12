@@ -4,17 +4,17 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>NYSRP Dashboard Login</title>
-<link href="css/tailwind.css" rel="stylesheet">
-<link href="css/styles.css" rel="stylesheet">
+<link href="https://cdn.tailwindcss.com" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
 </head>
-<body class="bg-gradient-to-br from-[#0F111A] via-[#1A1C29] to-[#0F111A] flex items-center justify-center h-screen font-orbitron">
-  <div class="w-96 bg-white/10 backdrop-blur-xl rounded-2xl shadow-lg p-8 border border-white/20 flex flex-col items-center">
-    <h1 class="text-4xl text-cyan-400 mb-6 font-bold">NYSRP Login</h1>
-    <input id="password" type="password" placeholder="Enter Password" class="w-full p-3 mb-4 rounded-lg bg-gray-800 text-white placeholder-gray-400 focus:ring-2 focus:ring-cyan-400 outline-none">
-    <button id="loginBtn" class="w-full py-3 rounded-lg bg-cyan-500 hover:bg-cyan-600 transition font-bold text-black">Login</button>
-    <p id="errorMsg" class="text-red-500 mt-3 hidden">Incorrect password!</p>
-  </div>
-  <script src="js/auth.js"></script>
+<body>
+<div class="glass-card">
+  <h1>NYSRP LOGIN</h1>
+  <input type="password" id="password" placeholder="Enter Password" autocomplete="off">
+  <button id="loginBtn">Login</button>
+  <p id="errorMsg">Incorrect password!</p>
+</div>
+<script src="js/auth.js"></script>
 </body>
 </html>
