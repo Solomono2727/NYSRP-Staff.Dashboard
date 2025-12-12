@@ -4,15 +4,20 @@ const passwordInput = document.getElementById("password");
 const errorMsg = document.getElementById("errorMsg");
 
 loginBtn.addEventListener("click", () => {
-  if (passwordInput.value === PASSWORD) {
+  if(passwordInput.value === PASSWORD){
     localStorage.setItem("nysrpAuth", "true");
     window.location.href = "dashboard.html";
   } else {
-    errorMsg.classList.remove("hidden");
+    errorMsg.style.display = "block";
+    passwordInput.value = "";
+    passwordInput.focus();
   }
 });
 
-// Redirect if already logged in
-if (localStorage.getItem("nysrpAuth") === "true" && window.location.pathname.endsWith("index.html")) {
+passwordInput.addEventListener("keyup", (e) => {
+  if(e.key === "Enter") loginBtn.click();
+});
+
+if(localStorage.getItem("nysrpAuth") === "true"){
   window.location.href = "dashboard.html";
 }
