@@ -1,17 +1,20 @@
-/* Glass + Neon Theme */
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.glass-card {
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255,255,255,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.glass-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 30px rgba(0,255,255,0.5);
 }
 
 .sidebar-item:hover {
-  background: rgba(255,255,255,0.05);
-  transition: 0.3s;
-}
-
-#mainContent h2 {
+  background: rgba(0,255,255,0.1);
   color: #00ffff;
-}
-
-#sidebar {
-  backdrop-filter: blur(12px);
 }
