@@ -4,15 +4,17 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>NYSRP Dashboard</title>
-<link href="css/tailwind.css" rel="stylesheet">
-<link href="css/styles.css" rel="stylesheet">
+<link href="https://cdn.tailwindcss.com" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
 </head>
-<body class="flex bg-[#0F111A] text-white font-orbitron">
+<body class="flex h-screen bg-[#0F111A] text-white font-orbitron">
+
   <!-- Sidebar -->
   <aside id="sidebar" class="w-64 bg-white/5 backdrop-blur-xl p-4 flex flex-col transition-all duration-300">
-    <h1 class="text-cyan-400 text-2xl font-bold mb-6 text-center">NYSRP Dashboard</h1>
+    <h1 class="text-cyan-400 text-2xl font-bold mb-6 text-center">NYSRP</h1>
     <ul class="flex flex-col space-y-2">
+      <li data-page="home" class="sidebar-item hover:bg-white/10 p-2 rounded cursor-pointer transition">Home</li>
       <li data-page="activity" class="sidebar-item hover:bg-white/10 p-2 rounded cursor-pointer transition">Activity Tracker</li>
       <li data-page="moderation" class="sidebar-item hover:bg-white/10 p-2 rounded cursor-pointer transition">Moderation</li>
       <li data-page="training" class="sidebar-item hover:bg-white/10 p-2 rounded cursor-pointer transition">Training</li>
@@ -34,17 +36,11 @@
 
   <!-- Main Content -->
   <main id="mainContent" class="flex-1 p-6 overflow-auto">
-    <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
-      <div class="glass-card p-6 rounded-2xl shadow-lg">
-        <h2 class="text-cyan-400 font-bold text-xl mb-2">Welcome</h2>
-        <p>Select a module from the sidebar to get started.</p>
-      </div>
-      <!-- Cards will be dynamically loaded here -->
-    </div>
+    <!-- Module content dynamically loaded here -->
   </main>
 
   <script src="js/auth.js"></script>
-  <script src="js/router.js"></script>
+  <script type="module" src="js/router.js"></script>
   <script src="js/sidebar.js"></script>
 </body>
 </html>
