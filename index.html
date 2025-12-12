@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NYSRP Dashboard Login</title>
-  <link href="css/tailwind.css" rel="stylesheet">
-  <link href="css/styles.css" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NYSRP Dashboard Login</title>
+<link href="css/tailwind.css" rel="stylesheet">
+<link href="css/styles.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
 </head>
-<body class="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 h-screen flex items-center justify-center">
-  <div class="w-96 bg-gray-800/70 backdrop-blur-lg p-8 rounded-xl shadow-xl text-center">
-    <h1 class="text-3xl font-bold text-white mb-6">NYSRP Staff Login</h1>
-    <input type="password" id="password" placeholder="Enter Password" class="w-full p-3 rounded-lg mb-4 text-black">
-    <button id="loginBtn" class="w-full bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-lg font-semibold transition">Login</button>
+<body class="bg-gradient-to-br from-[#0F111A] via-[#1A1C29] to-[#0F111A] flex items-center justify-center h-screen font-orbitron">
+  <div class="w-96 bg-white/10 backdrop-blur-xl rounded-2xl shadow-lg p-8 border border-white/20 flex flex-col items-center">
+    <h1 class="text-4xl text-cyan-400 mb-6 font-bold">NYSRP Login</h1>
+    <input id="password" type="password" placeholder="Enter Password" class="w-full p-3 mb-4 rounded-lg bg-gray-800 text-white placeholder-gray-400 focus:ring-2 focus:ring-cyan-400 outline-none">
+    <button id="loginBtn" class="w-full py-3 rounded-lg bg-cyan-500 hover:bg-cyan-600 transition font-bold text-black">Login</button>
     <p id="errorMsg" class="text-red-500 mt-3 hidden">Incorrect password!</p>
   </div>
-
   <script src="js/auth.js"></script>
 </body>
 </html>
